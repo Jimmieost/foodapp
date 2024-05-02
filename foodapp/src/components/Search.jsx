@@ -5,7 +5,7 @@ const URL = "https://api.spoonacular.com/recipes/complexSearch";
 const API_KEY = "5b7960f2eb114db4a1ecbaafd3f30602";
 
 export default function Search({ setFoodData }) {
-  const [query, setQuery] = useState("pizza");
+  const [query, setQuery] = useState("search dish");
 
   //syntax for the useEffect hook is useEffect(() => {}, [])
   useEffect(() => {

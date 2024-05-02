@@ -55,8 +55,11 @@ export default function FoodDetails({ foodId }) {
             {isLoading ? (
               <p>Loading...</p>
             ) : (
+              food.analyzedInstructions &&
+              food.analyzedInstructions[0] &&
+              food.analyzedInstructions[0].steps &&
               food.analyzedInstructions[0].steps.map((step) => (
-                <li>{step.step}</li>
+                <li key={step.number}>{step.step}</li>
               ))
             )}
           </ol>
